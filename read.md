@@ -1,8 +1,7 @@
-RESTFUL ROUTES
+Yelpcamp web app
 
-name      url      verb    desc.
-===============================================
-INDEX   /dogs      GET   Display a list of all dog
-NEW     /dogs/new  GET   Displays form to make a new dog
-CREATE  /dogs      POST  Add new dog to DB
-SHOW    /dogs/:id  GET   Shows info about one dog
+A demo app for people to find exciting campgrounds around the world
+
+Allow users to search and comment about the comments
+
+Allow users to upload campground locations and set the price of the campgrounds per night.
