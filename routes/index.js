@@ -39,20 +39,19 @@ router.post("/login", passport.authenticate("local",
         successRedirect: "/campgrounds",
         failureRedirect: "/login"
     }), function(req, res){
-        if(passport.authenticate.successRedirect) {
-            req.flash("success", "Welcome back" + req.params.id);
-            res.redirect(passport.authenticate.successRedirect);
-        } else {
-            req.flash("error", "Something went wrong, please try again");
-            res.redirect(passport.authenticate.failureRedirect);
-        }
-
+        // if(passport.authenticate.successRedirect) {
+        //     req.flash("success", "Welcome back" + req.params.id);
+        //     res.redirect(passport.authenticate.successRedirect);
+        // } else {
+        //     req.flash("error", "Something went wrong, please try again");
+        //     res.redirect(passport.authenticate.failureRedirect);
+        // }
 });
 
 //logout route
 router.get("/logout", function(req, res){
     req.logout();
-    req.flash("error", "You have been logged out");
+    req.flash("success", "Logged out");
     res.redirect("/campgrounds");
 })
 
